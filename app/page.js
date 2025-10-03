@@ -136,7 +136,7 @@ export default function HomePage() {
 
   // --- IMPORTANT ---
   // Replace this with the actual URL of your FastAPI backend
-  const API_ENDPOINT = 'https://code-doc-backend-xmok.onrender.com';
+  const API_ENDPOINT = 'http://localhost:8000/predict';
 
   useEffect(() => {
     const unsubscribeAuth = onAuthStateChanged(auth, user => {
