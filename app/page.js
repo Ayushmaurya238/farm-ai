@@ -187,9 +187,11 @@ export default function HomePage() {
       const transformedResult = {
         status: details.status || 'Unknown',
         confidence: parseFloat(resultData.confidence) || 0,
-        diseaseName: details.diseaseName || 'N/A',
+        diseaseName: details.disease_name || 'N/A',
         cause: details.cause || 'No information available.',
+        prevention:details.prevention || 'No information available',
         treatment: details.treatment || 'No information available.'
+        
       };
 
       dispatch({ type: 'ANALYSIS_SUCCESS', payload: { result: transformedResult, imagePreview: imagePreviewUrl } });
